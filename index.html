@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ServiceTrack – Live Service Status</title>
+<meta name="theme-color" content="#fbfbf9">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="customer">
+<nav class="nav"><span class="logo" translate="no">ServiceTrack</span>
+ <div class="tg" id="tg" role="navigation" aria-label="Pages"><span class="ind" id="ind"></span><a href="index.html" class="on">Customer</a><a href="shop.html">Shop</a></div></nav>
+<main class="wrap"><div class="g">
+ <div class="bz s8 rv"><div class="cr hero"><span class="eye"><span id="jobTxt">Job</span> · Live</span>
+  <h1 id="carName"></h1>
+  <div class="meta"><span id="plate"></span> · <span id="owner"></span> · Checked in 09:10</div>
+  <div class="shop addf" style="max-width:600px"><input type="text" id="cN" placeholder="Car name / model" aria-label="Car name" style="flex:2"><input type="text" id="cP" placeholder="License plate" aria-label="License plate" spellcheck="false"><input type="text" id="cO" placeholder="Customer name" aria-label="Customer name"></div></div></div>
+ <div class="bz s4 rv" style="--d:.1s"><div class="cr eta"><span class="eye">Estimated ready</span><div class="t"><span class="sw" id="eta">–</span></div><div class="meta" id="left" aria-live="polite"></div>
+  <div class="shop addf"><input type="time" id="etaIn" aria-label="New estimated time"><button class="btn" id="etaBtn">Update ETA<span class="ar" aria-hidden="true">↗</span></button></div></div></div>
+
+ <div class="bz s12 rv"><div class="cr"><div class="lbl"><span>Progress</span><b><span class="sw" id="stTxt"></span></b></div>
+  <div class="trkw"><div class="trk" id="trk"><div class="ln"></div><div class="fl" id="fl"></div></div></div>
+  <div class="shop addf"><span class="lbl" style="margin:0">Stage</span><select id="stSel" aria-label="Stage"></select></div></div></div>
+
+ <div class="bz s7 rv"><div class="cr"><div class="lbl"><span>01 · Location</span><b><span class="sw" id="locTxt"></span></b></div><div class="map" id="map"></div>
+  <div class="lbl shop" style="margin:14px 0 0">Select a zone to move the car</div></div></div>
+ <div class="bz s5 rv" style="--d:.1s"><div class="cr"><div class="lbl"><span>02 · Live bay</span><b><span class="sw" id="camName"></span></b></div>
+  <div class="cam" id="cam"><span class="live">Live</span><span class="ts" id="ts"></span><canvas id="cv" width="640" height="360" role="img" aria-label="Live bay camera feed"></canvas></div>
+  <div class="shop addf"><input type="text" id="camUrl" placeholder="Stream URL for this zone" aria-label="Stream URL"><button class="btn" id="camBtn">Link Camera<span class="ar" aria-hidden="true">↗</span></button><button class="btn g" id="camClr">Use Demo<span class="ar" aria-hidden="true">↗</span></button></div></div></div>
+
+ <div class="bz s5 rv"><div class="cr"><div class="lbl"><span>03 · Issues</span><b id="isCnt" aria-live="polite"></b></div><div id="issues" data-e="No issues added yet"></div>
+  <div class="shop addf"><input type="text" id="isT" placeholder="Describe the issue" aria-label="Issue description"><button class="btn" id="isAdd">Add Issue<span class="ar" aria-hidden="true">↗</span></button></div></div></div>
+ <div class="bz s7 rv" style="--d:.1s"><div class="cr"><div class="lbl"><span>04 · Photos</span><span class="shop"><label class="btn">Upload<span class="ar" aria-hidden="true">↗</span><input type="file" id="up" accept="image/*" multiple hidden></label></span></div>
+  <div class="alb" id="alb" data-e="No photos added yet"></div>
+  <div class="shop addf"><input type="text" id="phC" placeholder="Caption for next upload (optional)" aria-label="Photo caption"></div></div></div>
+
+ <div class="bz s12 rv"><div class="cr"><div class="lbl"><span>05 · Parts</span><b id="ptot"></b></div>
+  <div class="scroll"><table><thead><tr><th>Part</th><th class="n">Qty</th><th class="n">Price ฿</th><th style="text-align:right">Status</th><th></th></tr></thead><tbody id="parts"></tbody></table></div>
+  <div class="empty" id="pE">No parts added yet</div>
+  <div class="shop addf"><input type="text" id="pN" placeholder="Part name" aria-label="Part name" style="flex:3"><input type="number" id="pQ" placeholder="Qty" min="1" inputmode="numeric" aria-label="Quantity" style="flex:.6"><input type="number" id="pP" placeholder="Price ฿" min="0" inputmode="decimal" aria-label="Price" style="flex:1"><button class="btn" id="pAdd">Add Part<span class="ar" aria-hidden="true">↗</span></button></div></div></div>
+</div>
+<footer>Demo data · Updates appear instantly</footer></main>
+<div id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer"><div><img id="lbI" alt=""><p id="lbT" class="lbl" style="justify-content:center;margin:18px 0"></p><button class="btn" id="lbX">Close<span class="ar" aria-hidden="true">↗</span></button></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
