@@ -51,7 +51,7 @@ body.shop-mode .z{cursor:pointer}body.shop-mode .z:not(.here):hover{background:v
 .edit{display:none}body.shop-mode .edit{display:inline-block;animation:fi .6s var(--e)}body.shop-mode em.ro{display:none}
 @keyframes fi{from{opacity:0;transform:translateY(8px)}}
 .shop{display:none}body.shop-mode .shop{display:flex;animation:fi .6s var(--e)}
-select,input[type=time],input[type=text],input[type=number]{font:inherit;font-size:13px;background-color:var(--hv);color:var(--tx);border:0;border-radius:999px;padding:9px 14px;outline:0;max-width:100%;transition:box-shadow .4s var(--e)}
+select,input[type=time],input[type=datetime-local],input[type=text],input[type=number]{font:inherit;font-size:13px;background-color:var(--hv);color:var(--tx);border:0;border-radius:999px;padding:9px 14px;outline:0;max-width:100%;transition:box-shadow .4s var(--e)}
 select{padding-right:10px}select option{background-color:var(--core);color:var(--tx)}
 select:focus-visible,input:focus-visible{box-shadow:0 0 0 2px var(--tx);outline:0}
 .addf{gap:10px;align-items:center;flex-wrap:wrap;margin-top:22px}.addf input{flex:1;min-width:90px}
@@ -101,4 +101,4 @@ body.loading main{visibility:hidden}
 #lf h2{margin:0 0 4px;font-size:24px;font-weight:500;letter-spacing:-.03em}
 #lf input{width:100%;font:inherit;font-size:13px;background-color:var(--hv);color:var(--tx);border:0;border-radius:999px;padding:12px 16px;outline:0}
 #lf input:focus-visible{box-shadow:0 0 0 2px var(--tx)}#lf .btn{align-self:flex-start}
-
+ 
