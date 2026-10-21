@@ -18,8 +18,8 @@
   <h1 id="carName"></h1>
   <div class="meta"><span id="plate"></span> · <span id="owner"></span> · Checked in 09:10</div>
   <div class="shop addf" style="max-width:600px"><input type="text" id="cN" placeholder="Car name / model" aria-label="Car name" style="flex:2"><input type="text" id="cP" placeholder="License plate" aria-label="License plate" spellcheck="false"><input type="text" id="cO" placeholder="Customer name" aria-label="Customer name"></div></div></div>
- <div class="bz s4 rv" style="--d:.1s"><div class="cr eta"><span class="eye">Estimated ready</span><div class="t"><span class="sw" id="eta">–</span></div><div class="meta" id="left" aria-live="polite"></div>
-  <div class="shop addf"><input type="time" id="etaIn" aria-label="New estimated time"><button class="btn" id="etaBtn">Update ETA<span class="ar" aria-hidden="true">↗</span></button></div></div></div>
+ <div class="bz s4 rv" style="--d:.1s"><div class="cr eta"><span class="eye">Estimated ready</span><div class="t"><span class="sw" id="eta">–</span></div><div class="meta" style="margin-top:-2px"><span class="sw" id="etaD"></span></div><div class="meta" id="left" aria-live="polite"></div>
+  <div class="shop addf"><input type="datetime-local" id="etaIn" aria-label="New estimated date and time"><button class="btn" id="etaBtn">Update ETA<span class="ar" aria-hidden="true">↗</span></button></div></div></div>
  
  <div class="bz s12 rv"><div class="cr"><div class="lbl"><span>Progress</span><b><span class="sw" id="stTxt"></span></b></div>
   <div class="trkw"><div class="trk" id="trk"><div class="ln"></div><div class="fl" id="fl"></div></div></div>
@@ -49,4 +49,5 @@
 <script src="app.js"></script>
 </body>
 </html>
+ 
  
